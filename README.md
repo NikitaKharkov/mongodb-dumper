@@ -33,3 +33,4 @@ You can always see help info by run command with option `--help`:
 ```bash
 ./restore.sh --help
 ```
+Inspired by [Ferikl](https://github.com/Ferikl)
