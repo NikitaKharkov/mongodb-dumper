@@ -64,8 +64,7 @@ if [ -f $FILEPATH ]
                 exit
         fi
 
-        cat $FILEPATH | docker run --rm -i mongo \
-            bash -c "cat > a.gz;  mongorestore --host $HOST --port $PORT $OPTIONS --archive=a.gz --gzip --drop"
+        cat $FILEPATH | docker run --rm -i mongo mongorestore --host $HOST --port $PORT --archive --gzip --drop $OPTIONS
     else
         echo "Such file doesn't exists!"
 fi
